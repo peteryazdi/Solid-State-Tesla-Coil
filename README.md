@@ -23,6 +23,7 @@ An antenna near the coil picks up the secondary's oscillation and feeds it back 
 - **Secondary:** about 800 turns of 30 AWG magnet wire over 17 in of a 21 in PVC pipe, wound on a lathe
 - **Top load:** a toroid made from 4 in aluminum air duct wrapped in aluminum tape, with a sharpened rod as the breakout point
 - **Base and enclosure:** designed in Onshape. Plywood base and side panels cut on a waterjet and laser engraved, with handles. The driver sits in a grounded steel box on a shelf under the coil, away from the top load
+- **CAD:** the full assembly and each part as STL files in [mech/](mech/). The 3D-printed primary holder is used 8 times and the side panel twice
 
 <p align="center">
   <img src="docs/images/secondary-winding.jpg" width="280" alt="Winding the secondary coil on a lathe">
@@ -82,7 +83,9 @@ The coil ran at both power settings, producing streamers from the breakout point
 
 ```
 docs/          Build report
-docs/images/   Photos and the CAD model
+docs/images/   Photos and a render of the CAD model
+mech/          Full assembly as STL
+mech/parts/    Each part as STL
 ```
 
 ## Getting the files
@@ -92,7 +95,7 @@ cd ~/Desktop
 git clone https://github.com/peteryazdi/Solid-State-Tesla-Coil.git
 ```
 
-This works in Terminal on macOS and Linux and in PowerShell on Windows.
+This works in Terminal on macOS and Linux and in PowerShell on Windows. GitHub shows the STL files in a 3D viewer, and any slicer or CAD tool can open them.
 
 ## Safety
 
@@ -106,7 +109,7 @@ This is an educational project. A Tesla coil runs from mains voltage and makes h
 
 - The driver circuit and PCB are the LabCoatz SSTC 2.0 by Zach Armstrong ([LabCoatz](https://hackaday.io/project/182391)), based on designs by Steve Ward and Gao Guangyan (Loneoceans) and refined with several other Tesla coil builders.
 - The coil dimensions were modeled in JavaTC by Bart Anderson.
-- Engineers in UBC Physics and Astronomy helped with the design and fabrication.
+- Thanks to Bernhard Zender (Engineering Physics Project Lab) and Mark Carlson (Physics and Astronomy) at UBC for their engineering help.
 
 ## License
 
