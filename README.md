@@ -18,7 +18,8 @@ An antenna near the coil picks up the secondary's oscillation and feeds it back 
 
 ## Hardware
 
-- **Driver:** LabCoatz SSTC 2.0 board with two FGA60N65SMD IGBTs in a half bridge, a UCC27425 gate driver and gate drive transformer, a 74HC14 Schmitt trigger for the antenna feedback, an NE555 interrupter with an adjustable duty cycle, an inrush-limiting thermistor and the voltage doubler. The ICs sit in sockets and the wiring uses screw terminals, so parts can be swapped easily
+- **Driver:** LabCoatz SSTC 2.0 board with two FGA60N65SMD IGBTs in a half bridge, a UCC27425 gate driver and gate drive transformer, a 74HC14 Schmitt trigger for the antenna feedback, an NE555 interrupter with an adjustable duty cycle, an inrush-limiting thermistor and the voltage doubler. The ICs sit in sockets and the wiring uses screw terminals, so parts can be swapped easily. The schematic, PCB files and build guide are LabCoatz's, so they are linked under [Credits](#credits) rather than copied here
+- **Audio interrupter:** my own 2-layer board, laid out in KiCad, with a comparator that turns an audio signal into on/off pulses for the gate driver in place of the 555. Gerbers are in [electronics/audio-interrupter/](electronics/audio-interrupter/). It was not finished, so the music mode never worked
 - **Primary:** 8 to 10 turns of 16 AWG magnet wire on 3D-printed holders
 - **Secondary:** about 800 turns of 30 AWG magnet wire over 17 in of a 21 in PVC pipe, wound on a lathe
 - **Top load:** a toroid made from 4 in aluminum air duct wrapped in aluminum tape, with a sharpened rod as the breakout point
@@ -43,6 +44,12 @@ An antenna near the coil picks up the secondary's oscillation and feeds it back 
   <img src="docs/images/cad-model.png" width="420" alt="Onshape model of the coil, base and enclosure">
   <br>
   <sub>Onshape model of the coil, base and enclosure.</sub>
+</p>
+
+<p align="center">
+  <img src="docs/images/audio-interrupter-board.png" width="360" alt="Audio interrupter board layout, top side">
+  <br>
+  <sub>Audio interrupter board, top side, rendered from the Gerbers.</sub>
 </p>
 
 ## Specifications
@@ -82,10 +89,11 @@ The coil ran at both power settings, producing streamers from the breakout point
 ## Repository layout
 
 ```
-docs/          Build report
-docs/images/   Photos and a render of the CAD model
-mech/          Full assembly as STL
-mech/parts/    Each part as STL
+docs/                            Build report
+docs/images/                     Photos, a CAD render and the audio interrupter board
+mech/                            Full assembly as STL
+mech/parts/                      Each part as STL
+electronics/audio-interrupter/   Gerbers for the audio interrupter board
 ```
 
 ## Getting the files
@@ -107,7 +115,7 @@ This is an educational project. A Tesla coil runs from mains voltage and makes h
 
 ## Credits
 
-- The driver circuit and PCB are the LabCoatz SSTC 2.0 by Zach Armstrong ([LabCoatz](https://hackaday.io/project/182391)), based on designs by Steve Ward and Gao Guangyan (Loneoceans) and refined with several other Tesla coil builders.
+- The driver circuit, PCB and build guide are the LabCoatz SSTC 2.0 by Zach Armstrong ([LabCoatz](https://hackaday.io/project/182391)), based on designs by Steve Ward and Gao Guangyan (Loneoceans) and refined with several other Tesla coil builders.
 - The coil dimensions were modeled in JavaTC by Bart Anderson.
 - Thanks to Bernhard Zender (Engineering Physics Project Lab) and Mark Carlson (Physics and Astronomy) at UBC for their engineering help.
 
