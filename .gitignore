@@ -1,0 +1,18 @@
+# OS and editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+__pycache__/
+*.pyc
+*.swp
+
+# Office lock files
+~$*
+
+# Raw photos and videos (curated images are in docs/images)
+*.HEIC
+*.MOV
+*.MP4
+*.mov
+*.mp4
